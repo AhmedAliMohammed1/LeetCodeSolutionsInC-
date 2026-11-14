@@ -8,6 +8,8 @@ Each problem has its own folder containing a description, my implementation, and
 
 | Problem | Difficulty | Files |
 | --- | --- | --- |
+| [1. Two Sum](https://leetcode.com/problems/two-sum/) | Easy | [Description and code](1.%20Two%20Sum/) |
+| [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium | [Description and code](2.%20Add%20Two%20Numbers/) |
 | [3364. Minimum Positive Sum Subarray](https://leetcode.com/problems/minimum-positive-sum-subarray/) | Easy | [Description and code](3364.%20Minimum%20Positive%20Sum%20Subarray/) |
 
 ## Build and debug
