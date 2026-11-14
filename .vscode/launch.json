@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [{
+    "name": "C++: debug task folder",
+    "type": "cppdbg",
+    "request": "launch",
+    "program": "${fileDirname}/main.exe",
+    "cwd": "${fileDirname}",
+    "args": [],
+    "stopAtEntry": false,
+    "externalConsole": false,
+    "MIMode": "gdb",
+    "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
+    "environment": [{"name":"PATH","value":"C:\\msys64\\ucrt64\\bin;${env:PATH}"}],
+    "setupCommands": [{"text":"-enable-pretty-printing","ignoreFailures":true}],
+    "preLaunchTask": "C++: build task folder"
+  }]
+}

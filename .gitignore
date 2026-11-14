@@ -1,0 +1,7 @@
+# Generated C/C++ build artifacts
+*.exe
+*.o
+*.obj
+*.out
+*.pdb
+build/
