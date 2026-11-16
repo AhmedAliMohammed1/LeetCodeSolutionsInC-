@@ -24,10 +24,21 @@ For example, `[2, 4, 3]` encodes 342, so adding `[5, 6, 4]` (465) produces `[7, 
 - Node values range from 0 to 9.
 - Each list encodes a number without leading zeros.
 
-## Local practice
+## My implementations
 
-[main.cpp](main.cpp) provides the LeetCode-compatible `ListNode`, a TODO `addTwoNumbers` method, and 14 tests. Tests cover the official examples, zeros, unequal lengths, carries, and 100-node inputs.
+- [Pointers](pointers/main.cpp): my LeetCode-compatible implementation using raw pointers and 14 tests.
+- [Smart pointers](smart_pointers/main.cpp): my local `std::shared_ptr` version with the same 14 tests. See its [notes](smart_pointers/README.md); its signature differs from LeetCode's.
 
-Open the C++ file in VS Code. Press **Ctrl+Shift+B** to build or **F5** to debug. Run `main.exe` from this folder for test results. The starter reports `Not implemented yet` until I implement the method.
+Each variant is an independent program with its own `main()`. Open the chosen variant's C++ file in VS Code and press **Ctrl+Shift+B** to build or **F5** to debug.
+
+From the repository root, build and run the pointer version:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .vscode/scripts/build.ps1 -SourceDirectory "2. Add Two Numbers/pointers"
+$env:Path = 'C:/msys64/ucrt64/bin;' + $env:Path
+& './2. Add Two Numbers/pointers/main.exe'
+```
+
+For the smart-pointer version, replace `pointers` with `smart_pointers` in both paths.
 
 The task description above is paraphrased from LeetCode.

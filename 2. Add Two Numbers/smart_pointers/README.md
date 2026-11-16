@@ -30,16 +30,16 @@ For example, `[2, 4, 3]` encodes 342, so adding `[5, 6, 4]` (465) produces `[7, 
 
 The method receives smart pointers by value, so advancing its local copies leaves the input lists intact. Result nodes are allocated separately. Shared ownership lets list heads and traversal cursors refer to the same nodes safely. Avoid creating cycles: shared pointers cannot reclaim cycles automatically.
 
-This is a local C++ ownership exercise. LeetCode requires `ListNode* addTwoNumbers(ListNode*, ListNode*)`, so this smart-pointer version cannot be submitted directly. My original implementation remains in [the original folder](../2.%20Add%20Two%20Numbers/).
+This is a local C++ ownership exercise. LeetCode requires `ListNode* addTwoNumbers(ListNode*, ListNode*)`, so this smart-pointer version cannot be submitted directly. My original implementation remains in [the original folder](../pointers/).
 
-The adapted implementation also fixes the original's dereference of input pointers after they reach the end of a list. It appends one result node per loop iteration.
+I keep this version alongside my raw-pointer version to practice ownership with smart pointers.
 
 From the repository root, build and run with PowerShell:
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .vscode/scripts/build.ps1 -SourceDirectory "2. Add Two Numbers - Smart Pointers"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .vscode/scripts/build.ps1 -SourceDirectory "2. Add Two Numbers/smart_pointers"
 $env:Path = 'C:/msys64/ucrt64/bin;' + $env:Path
-& './2. Add Two Numbers - Smart Pointers/main.exe'
+& './2. Add Two Numbers/smart_pointers/main.exe'
 ```
 
 In VS Code, open this folder's `main.cpp`, then press **Ctrl+Shift+B** to build or **F5** to debug.
