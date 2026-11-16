@@ -21,8 +21,8 @@ class Solution
 public:
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
 {
-    ListNode dummy;          // Placeholder before the first result node.
-    ListNode* tail = &dummy;
+    ListNode* tail = new ListNode();
+    ListNode *dummy = tail;          // Placeholder before the first result node.
     int carry = 0;
 
     while (l1 != nullptr || l2 != nullptr || carry != 0)
@@ -44,11 +44,15 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
         int digit = sum % 10;
         carry = sum / 10;
 
-        tail->next = new ListNode(digit);
+        tail->val = digit;
+        if(l1 != nullptr || l2 != nullptr || carry != 0){
+        tail->next = new ListNode();
         tail = tail->next;
+        }
+
     }
 
-    return dummy.next;
+    return dummy;
 }
 };
 
